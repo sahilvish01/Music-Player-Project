@@ -1,0 +1,250 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgb(32, 32, 32);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+nav
+{
+    background-color: #5c5c5c;
+    /* background-color: rgb(55, 55, 55); */
+    /* background-color: #fff; */
+    height: 5svh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+#picture
+{
+    height: 65%;
+    width: 75%;
+    margin:  auto;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    display: block;
+    border-radius: 10px;
+}
+
+.Controller
+{
+    height: 95svw;
+    width: 80svw;
+    background-color: rgb(55, 55, 55);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feat
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 15%;
+    /* background-color: #fff; */
+
+}
+
+.btn
+{
+    height: 60%;
+    width:10%;
+    font-size: 1.5rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 100%;
+    font-weight: 900;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.67);
+    color: grey;
+    justify-content: center;
+    align-items: center;
+}
+
+#MainBtn 
+{
+   height: 150%;
+   /* width: %; */
+   
+   /* display: block;
+   height: 70%;
+    width: 80%; */
+
+   background-color: #ffffff00;
+   border: 0px;
+}
+
+#MainBtn > img
+{
+     display: block;
+  height: 70%;
+    width:90%;
+    margin: auto;
+} 
+
+
+#title
+{
+    /* transform: translateY(-40%); */
+    font-size: 150%;
+    
+}
+
+#singer
+{
+    font-size: 50%;
+    margin-bottom: 2%;
+
+    /* transform: translateY(-40%); */
+}
+
+.right-sidebar
+{
+    background-color: rgb(55, 55, 55);
+    /* background-color: #fff; */
+    width: 25svw;
+    top: 6.5svh;
+    bottom: 10px;
+    position: absolute;
+    right:  0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: none;
+}
+
+.left-sidebar
+{
+    /* background-color: #fff; */
+    background-color: rgb(55, 55, 55);
+    width: 25svw;
+    top: 6.5svh;
+    bottom: 10px;
+    position: absolute;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left: 0px;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* display: none; */
+    transform: translateX(-100%);
+}
+
+.songs
+{
+    margin: 10px; 
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5c5c5c;
+    color: rgb(180, 180, 180);
+}
+
+.left-sidebar>h1
+{
+    color: rgb(180, 180, 180);
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+
+.trending
+{
+    /* background-color: #fff; */
+    height: 45%;
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    margin: 10px; 
+    /* color: rgb(180, 180, 180); */
+
+}
+
+.trending>h1
+{
+    background-color: #5c5c5c;
+    border-radius: 10px;
+}
+
+.trending>h1,.trending>h3{
+    color: rgb(180, 180, 180);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (width > 650px)
+{
+
+    .Controller
+    {
+        height: 75svw;
+        width: 65svw;
+    }
+
+}
+
+@media (width > 900px)
+{
+
+    .Controller
+    {
+        height: 550px;
+        width: 500px;
+    }
+
+}
+
+@media (width <= 1050px) {
+    
+    .left-sidebar
+    {
+        width: 400px;
+    }
+
+}
+
+@media (width > 1050px) {
+    
+    .left-sidebar
+    {
+        transform: translateX(0%);        
+    }
+
+    .right-sidebar
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+
+    
+
+    nav :first-child
+    {
+        visibility: hidden;
+    }
+
+}
